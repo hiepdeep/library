@@ -10,20 +10,60 @@
 		<meta name="description" content="Lorem Ipsum is simply dummy text of the printing and typesetting industry">
 		<link rel='stylesheet' href='https://hiepdeep.github.io/cdn/style.css'>
 		<style type="text/css">
+			:root {
+				--clr: #23ede5;
+				--bg: #161824;
+			}
 			body {
-				background: #E9EBEE;
-				font-family: "Be Vietnam Pro", sans-serif;
+				background: var(--bg);
+				font-family: "Consolas";
 				display: flex;
 				justify-content: center;
 				align-items: center;
 				height: 100vh;
-				background-position: center;
-				background-repeat: no-repeat;
-				background-size: cover;
+			}
+			.box {
+				background: rgba(255, 255, 255, 0.05);
+				width: 960px;
+				height: 540px;
+				position: relative;
+				overflow: hidden;
+				box-shadow: 0 0 0 4px var(--clr) inset;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				color: var(--clr);
+				font-size: 24px;
+				font-weight: 500;
 				letter-spacing: 0.04em;
 			}
-			.welcome {
-				font: 24px "Be Vietnam Pro";
+			.box:before, .box:after {
+				content: "";
+				position: absolute;
+				background: var(--clr);
+				width: 48px;
+				height: 48px;
+				transform: rotate(45deg);
+				z-index: 999;
+				border: 4px solid var(--bg);
+				box-shadow: 0 0 0 4px var(--clr);
+				transition: 0.25s ease-in-out;
+			}
+			.box:before {
+				top: calc(-36px - 0px);
+				left: calc(-36px - 0px);
+			}
+			.box:after {
+				right: calc(-36px - 0px);
+				bottom: calc(-36px - 0px);
+			}
+			.box:hover:before {
+				top: calc(-36px - 4px);
+				left: calc(-36px - 4px);
+			}
+			.box:hover:after {
+				right: calc(-36px - 4px);
+				bottom: calc(-36px - 4px);
 			}
 		</style>
 	</head>
