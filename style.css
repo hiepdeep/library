@@ -1,0 +1,16 @@
+body {
+  background: #E9EBEE;
+  font-family: "Be Vietnam Pro", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  letter-spacing: 0.04em;
+}
+
+.welcome {
+  font: 24px "Be Vietnam Pro";
+}
