@@ -67,10 +67,22 @@
 			}
 			.welcome span {
 				transition: 0.25s;
+				animation: bounceIn 1s;
 			}
 			.welcome span:hover {
 				padding-bottom: 20px;
 				cursor: pointer;
+			}
+			@keyframes bounceIn {
+				0% {
+					padding-bottom: 0px;
+				}
+				50% {
+					padding-bottom: 20px;
+				}
+				100% {
+					padding-bottom: 0px;
+				}
 			}
 		</style>
 	</head>
