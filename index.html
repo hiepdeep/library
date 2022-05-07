@@ -64,9 +64,11 @@
 				right: calc(-36px - 4px);
 				bottom: calc(-36px - 4px);
 			}
-			.welcome:hover span {
+			.welcome span {
 				min-width: 30px;
 				transition: 0.25s;
+			}
+			.welcome:hover span {
 				animation: bounceIn 0.5s ease-in-out;
 			}
 			.welcome span:hover {
@@ -98,7 +100,7 @@
 				letters.forEach(function (letter, i) {
 					var span = document.createElement("span");
 					span.textContent = letter;
-					span.style.setProperty("animation-delay", (i * 0.05 + 1) + "s");
+					span.style.setProperty("animation-delay", (i * 0.05) + "s");
 					landInText.append(span);
 				});
 			});
