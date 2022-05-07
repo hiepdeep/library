@@ -98,7 +98,7 @@
 				letters.forEach(function (letter, i) {
 					var span = document.createElement("span");
 					span.textContent = letter;
-					span.style.setProperty("animation-delay", (i * 0.05) + "s");
+					span.style.setProperty("animation-delay", (i * 0.05 + 1) + "s");
 					landInText.append(span);
 				});
 			});
