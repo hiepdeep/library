@@ -65,9 +65,28 @@
 				right: calc(-36px - 4px);
 				bottom: calc(-36px - 4px);
 			}
+			.welcome span {
+				transition: 0.25s;
+			}
+			.welcome span:hover {
+				padding-bottom: 20px;
+				cursor: pointer;
+			}
 		</style>
 	</head>
 	<body>
 		<div class="welcome">Habibi. Come to Hiepdeep !</div>
+		<script type="text/javascript">
+			var landInTexts = document.querySelectorAll('.welcome');
+			landInTexts.forEach(function (landInText) {
+				var letters = landInText.textContent.split('');
+				landInText.textContent = "";
+				letters.forEach(function (letter, i) {
+					var span = document.createElement("span");
+					span.textContent = letter;
+					landInText.append(span);
+				});
+			});
+		</script>
 	</body>
 </html>
