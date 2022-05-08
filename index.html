@@ -110,6 +110,12 @@
 		<div class="welcome">Habibi. Welcome to Hiepdeep !</div>
 		<div id="cursor"></div>
 		<script type="text/javascript">
+			document.addEventListener("mousemove", function(event) {
+				let _x = event.clientX;
+				let _y = event.clientY;
+				cursor.style.setProperty("--x", Math.floor(_x - (50 / 2)) + "px");
+				cursor.style.setProperty("--y", Math.floor(_y - (50 / 2)) + "px");
+			});
 			var landInTexts = document.querySelectorAll('.welcome');
 			landInTexts.forEach(function (landInText) {
 				var letters = landInText.textContent.split('');
@@ -120,12 +126,6 @@
 					span.style.setProperty("animation-delay", (i * 0.05) + "s");
 					landInText.append(span);
 				});
-			});
-			document.addEventListener("mousemove", function(event) {
-				let _x = event.clientX;
-				let _y = event.clientY;
-				cursor.style.setProperty("--x", Math.floor(_x - (50 / 2)) + "px");
-				cursor.style.setProperty("--y", Math.floor(_y - (50 / 2)) + "px");
 			});
 		</script>
 	</body>
