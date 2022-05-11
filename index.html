@@ -4,11 +4,11 @@
 		<meta charset="UTF-8">
 		<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
 		<meta content="width=device-width, initial-scale=1" name="viewport">
-		<link rel="icon" href="https://hiepdeep.github.io/cdn/favicon/favicon.svg">
+		<link rel="icon" href="/cdn/favicon/favicon.svg">
 		<title>HiepDeep | Library</title>
 		<meta name="title" content="HiepDeep | Library">
 		<meta name="description" content="Lorem Ipsum is simply dummy text of the printing and typesetting industry">
-		<link rel='stylesheet' href='https://hiepdeep.github.io/cdn/style.css'>
+		<link rel="stylesheet" href="/cdn/style.css">
 		<style type="text/css">
 			:root {
 				--clr: #23ede5;
@@ -92,11 +92,10 @@
 	</head>
 	<body>
 		<div class="welcome">Habibi. Welcome to Hiepdeep !</div>
-		<div id="cursor"></div>
 		<script type="text/javascript">
-			var landInTexts = document.querySelectorAll('.welcome');
+			var landInTexts = document.querySelectorAll(".welcome");
 			landInTexts.forEach(function (landInText) {
-				var letters = landInText.textContent.split('');
+				var letters = landInText.textContent.split("");
 				landInText.textContent = "";
 				letters.forEach(function (letter, i) {
 					var span = document.createElement("span");
