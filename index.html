@@ -22,23 +22,6 @@
 				align-items: center;
 				height: 100vh;
 				overflow: hidden;
-				cursor: none;
-			}
-			body:hover #cursor {
-				width: 50px;
-				height: 50px;
-				border: 1px solid rgba(255, 255, 255, 0.1);
-			}
-			#cursor {
-				background: rgba(255, 255, 255, 0.1);
-				width: 0;
-				height: 0;
-				top: var(--y);
-				left: var(--x);
-				border-radius: 30px;
-				position: absolute;
-				transition: 0.25s ease-out;
-				z-index: 9999;
 			}
 			.welcome {
 				background: rgba(255, 255, 255, 0.05);
@@ -53,7 +36,7 @@
 				color: var(--clr);
 				font-size: 48px;
 				font-weight: 500;
-				cursor: none;
+				cursor: pointer;
 			}
 			.welcome:before, .welcome:after {
 				content: "";
@@ -110,12 +93,6 @@
 		<div class="welcome">Habibi. Welcome to Hiepdeep !</div>
 		<div id="cursor"></div>
 		<script type="text/javascript">
-			document.addEventListener("mousemove", function(event) {
-				let _x = event.clientX;
-				let _y = event.clientY;
-				cursor.style.setProperty("--x", Math.floor(_x - (50 / 2)) + "px");
-				cursor.style.setProperty("--y", Math.floor(_y - (50 / 2)) + "px");
-			});
 			var landInTexts = document.querySelectorAll('.welcome');
 			landInTexts.forEach(function (landInText) {
 				var letters = landInText.textContent.split('');
